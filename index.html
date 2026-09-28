@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Раскраска по номерам</title>
+    
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ГАМБУРГЕР-МЕНЮ (видно только на мобильных) -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+            <button class="menu-item" id="menuSettings"><i class="fa-solid fa-gear"></i> Настройки</button>
+            <button class="menu-item" id="menuProfile"><i class="fa-solid fa-user"></i> Профиль</button>
+        </div>
+    </div>
+
+    <!-- ЭКРАН 1: ГЛАВНАЯ -->
+    <main id="screen-main" class="screen active">
+        <header class="top-bar">
+            <!-- Три полоски для мобильного меню -->
+            <button class="hamburger-btn" id="openMenu"><i class="fa-solid fa-bars"></i></button>
+            <!-- Иконки для десктопа (скрыты на мобильном) -->
+            <button class="icon-btn settings-btn desktop-only"><i class="fa-solid fa-gear"></i></button>
+            <button class="icon-btn profile-btn desktop-only" id="openProfileDesktop"><i class="fa-solid fa-user"></i></button>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-card">
+                <!-- Твой бантик -->
+                <img src="D:\учеба\лабы\мобил\лр2\ec0e6542bfbe2b19286a37052ebd27d5.png" alt="Бантик" class="bow-decoration">
+                
+                <!-- Обёртка для картинки и рамки (кликабельная) -->
+                <div class="hero-image-wrapper" id="mainColoringLink">
+                    <!-- Твоя раскраска -->
+                    <img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Картина дня" class="hero-image">
+                </div>
+                
+                <!-- Твой блокнот -->
+                <div class="hero-label">
+                    <img src="D:\учеба\лабы\мобил\лр2\картина дня.png" alt="Записка" class="note-bg">
+                    <span>Картина дня</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bottom-nav">
+            <div class="nav-item">
+                <!-- Твоё приведение -->
+                <img src="D:\учеба\лабы\мобил\лр2\ивент.png" alt="Таймер" class="nav-icon">
+                <span>19:30</span>
+            </div>
+            <div class="nav-item" id="goToGallery">
+                <!-- Твои книги -->
+                <img src="D:\учеба\лабы\мобил\лр2\8a601aa5c16c82edfb957ca320969c44.png" alt="Галерея" class="nav-icon">
+                <span>Галерея</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- ЭКРАН 2: ГАЛЕРЕЯ -->
+    <main id="screen-gallery" class="screen">
+        <header class="top-bar">
+            <button class="back-btn" id="backToMain"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="tabs">
+                <button class="tab active">Нераскрашенные</button>
+                <button class="tab">Раскрашенные</button>
+            </div>
+        </header>
+
+        <section class="gallery-grid">
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 1"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 2"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 3"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 4"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 5"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 6"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 7"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 8"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 9"></div>
+            <div class="gallery-item"><img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска 10"></div>
+        </section>
+
+        <button class="fab-add"><i class="fa-solid fa-plus"></i></button>
+        <button class="back-btn-mobile" id="backToMainMobile"><i class="fa-solid fa-chevron-left"></i></button>
+    </main>
+
+    <!-- ЭКРАН 3: РАСКРАШИВАНИЕ -->
+    <main id="screen-coloring" class="screen">
+        <header class="top-bar">
+            <button class="back-btn" id="backToGallery"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="settings-btn"><i class="fa-solid fa-gear"></i></button>
+        </header>
+
+        <section class="coloring-area">
+            <img src="D:\учеба\лабы\мобил\лр2\Снимок экрана 2026-09-23 223019.png" alt="Раскраска" class="coloring-image">
+        </section>
+
+        <footer class="color-palette">
+            <button class="color-circle" style="background-color: #A6A6FF;">1</button>
+            <button class="color-circle" style="background-color: #E5A6FF;">2</button>
+            <button class="color-circle" style="background-color: #A6FFA6;">3</button>
+            <button class="color-circle" style="background-color: #FFA6C9;">4</button>
+            <button class="color-circle" style="background-color: #A6E5FF;">5</button>
+        </footer>
+    </main>
+
+    <!-- МОДАЛЬНОЕ ОКНО ПРОФИЛЯ -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeProfile"><i class="fa-solid fa-xmark"></i></button>
+            <div class="avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <h2>Имя</h2>
+            <button class="rewards-btn">Награды</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
